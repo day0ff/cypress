@@ -1,6 +1,6 @@
 describe('Input form', () => {
     beforeEach(() => {
-        cy.visit('/');
+        cy.seedAndVisit([]);
     });
 
     it('focuses input on load', () => {
@@ -19,7 +19,8 @@ describe('Input form', () => {
     context('Form submission', () => {
         beforeEach(() => {
             cy.server()
-        })
+        });
+
         it('Adds new todo on submit', () => {
             const itemText = 'Buy eggs';
 
